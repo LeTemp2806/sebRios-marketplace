@@ -11,9 +11,12 @@ Base inicial de un marketplace con arquitectura de monolito modular:
 ## Primer arranque
 
 1. Copia `apps/backend/.env.example` a `apps/backend/.env`.
-2. Levanta PostgreSQL con `docker compose up -d`.
-3. Inicia el backend desde `apps/backend`.
-4. Inicia el frontend desde `apps/frontend`.
+2. Asegura un PostgreSQL local escuchando en `localhost:5432`.
+3. Ejecuta `npm install`.
+4. Ejecuta `npm --workspace apps/backend run prisma:generate`.
+5. Ejecuta `npm --workspace apps/backend run prisma:migrate`.
+6. Inicia el backend con `npm run dev:backend`.
+7. Inicia el frontend con `npm run dev:frontend`.
 
 ## Módulos iniciales
 
